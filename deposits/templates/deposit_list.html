@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DepositList</title>
+</head>
+<body>
+    <ul>
+        {% for every in object_list %}
+            <li>
+                <a href="{% url 'deposit-get' pk=every.id %}">
+                    Deposit: {{ every.deposit }} <br>
+                    Term: {{ every.term }} <br>
+                    Rate: {{ every.rate }} <br>
+                    Interest: {{ every.interest }} <br>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
